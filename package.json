@@ -15,7 +15,6 @@
     "frete": "^0.4.6",
     "mongose": "^0.0.2-security",
     "node-correios": "^3.0.2",
-    "node": "16x",
     "nodemon": "^2.0.20",
     "sucrase": "^3.28.0"
   }
