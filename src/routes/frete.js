@@ -21,13 +21,13 @@ router.post("/", (request, response) => {
     .calcPreco({
       nCdServico: "04510",
       sCepOrigem: "28660000",
-      sCepDestino: 1,
-      nVlPeso: 1,
-      nCdFormato: 1,
-      nVlComprimento: 1,
-      nVlAltura: 1,
-      nVlLargura: 1,
-      nVlDiametro: 1,
+      sCepDestino,
+      nVlPeso,
+      nCdFormato,
+      nVlComprimento,
+      nVlAltura,
+      nVlLargura,
+      nVlDiametro,
     })
     .then((result) => {
       return response.json(result);
