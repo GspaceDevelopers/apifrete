@@ -16,7 +16,5 @@ app.use(cors());
 
 require(".").default(app);
 
-app.listen(process.env.PORT ||5050, () => {
-  console.log("Server started on port 5050!");
-});
+app.listen(process.env.PORT || 5050)
 // GPqepPrAbWYrl4ec
