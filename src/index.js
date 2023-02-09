@@ -15,9 +15,9 @@ app.post("/frete", (req, res) => {
     sCepDestino: cepdestino,
     nVlPeso: '1',
     nCdFormato: '1',
-    nVlComprimento: '1',
-    nVlAltura: '1',
-    nVlLargura: '1',
+    nVlComprimento: '20',
+    nVlAltura: '20',
+    nVlLargura: '20',
     nCdServico: ['04014', '04510'], //Array com os códigos de serviço
     nVlDiametro: '0',
   };
