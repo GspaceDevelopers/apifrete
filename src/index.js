@@ -29,4 +29,4 @@ app.post("/frete", (req, res) => {
   });
 
 })
-app.listen(3333 || process.env.PORT);
+app.listen(process.env.PORT);
