@@ -4,7 +4,7 @@ const ApiNodeCorreios = require("node-correios");
 import cors from "cors";
 const correios = new ApiNodeCorreios();
 
-router.post("/frete", (request, response) => {
+router.post("/", (request, response) => {
   const {
     nCdServico,
     sCepOrigem,
@@ -21,13 +21,13 @@ router.post("/frete", (request, response) => {
     .calcPreco({
       nCdServico: "04510",
       sCepOrigem: "28660000",
-      sCepDestino,
-      nVlPeso,
-      nCdFormato,
-      nVlComprimento,
-      nVlAltura,
-      nVlLargura,
-      nVlDiametro,
+      sCepDestino: 1,
+      nVlPeso: 1,
+      nCdFormato: 1,
+      nVlComprimento: 1,
+      nVlAltura: 1,
+      nVlLargura: 1,
+      nVlDiametro: 1,
     })
     .then((result) => {
       return response.json(result);
