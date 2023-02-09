@@ -29,6 +29,6 @@ app.post("/frete", (req, res) => {
   });
 
 })
-app.listen(3333, () => {
+app.listen(3333 || process.env.PORT, () => {
   console.log("A API de consulta de preço de frete está rodando na porta 3333.");
 });
