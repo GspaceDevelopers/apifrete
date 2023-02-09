@@ -4,7 +4,7 @@ const ApiNodeCorreios = require("node-correios");
 import cors from "cors";
 const correios = new ApiNodeCorreios();
 
-router.post("/", (request, response) => {
+router.post("/frete", (request, response) => {
   const {
     nCdServico,
     sCepOrigem,
