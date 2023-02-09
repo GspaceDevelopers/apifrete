@@ -3,9 +3,11 @@ const bodyParser = require("body-parser");
 import {
   calcularPrecoPrazo,
 } from 'correios-brasil';
+import cors from 'cors'
+
 const app = express();
 app.use(bodyParser.json());
-
+app.use(cors())
 app.post("/frete", (req, res) => {
 
   const { ceporigem, cepdestino } = req.body
