@@ -10,18 +10,18 @@ app.use(bodyParser.json());
 app.use(cors())
 app.post("/frete", (req, res) => {
 
-  const { ceporigem, cepdestino } = req.body
+  const { ceporigem, cepdestino,altura,largura,comprimento,peso,diametro,formato } = req.body
   let args = {
     // Não se preocupe com a formatação dos valores de entrada do cep, qualquer uma será válida (ex: 21770-200, 21770 200, 21asa!770@###200 e etc),
     sCepOrigem: ceporigem,
     sCepDestino: cepdestino,
-    nVlPeso: '1',
-    nCdFormato: '1',
-    nVlComprimento: '20',
-    nVlAltura: '20',
-    nVlLargura: '20',
+    nVlPeso:peso,
+    nCdFormato: formato,
+    nVlComprimento: comprimento,
+    nVlAltura: altura,
+    nVlLargura: largura,
     nCdServico: ['04014', '04510'], //Array com os códigos de serviço
-    nVlDiametro: '0',
+    nVlDiametro: diametro,
   };
 
   calcularPrecoPrazo(args).then(response => {
